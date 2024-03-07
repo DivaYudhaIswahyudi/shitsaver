@@ -11,6 +11,7 @@
                         <li><a href="<?=ROOT?>login">Login</a></li>
                         <li><a href="<?=ROOT?>signup">Signup</a></li>
                         <li><a href="<?=ROOT?>logout">Logout</a></li>
+                        <li><a href="https://github.com/DivaYudhaIswahyudi/shitsaver">Github</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">

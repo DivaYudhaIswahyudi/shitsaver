@@ -26,7 +26,7 @@
             <a class="navbar-brand" href="#">
                 <i class="fas fa-film mr-2"></i>
                 
-                <?=WEBSITE_TITLE?> 
+                <?= WEBSITE_TITLE ?>
                 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
