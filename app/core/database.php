@@ -8,7 +8,7 @@ Class Database
 
 		try{
 
-			$string = "mysql:host=localhost;dbname=catalog_db;";
+			$string = "mysql:host=localhost;dbname=shitsaver_db;";
 			return $db = new PDO($string,'root','');
 
 		}catch(PDOException $e)

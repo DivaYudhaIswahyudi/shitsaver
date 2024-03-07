@@ -1,20 +1,40 @@
-<?php 
+<?php
 
-Class Signup extends Controller
+class Signup extends Controller
 {
+    public function index()
+    {
+        $data['page_title'] = "Signup";
 
-	public function index()
-	{
-		$data['page_title'] = "Signup";
-		
-		if(isset($_POST['email']))
-		{
-			$model = $this->loadModel("user");
-			$model->signup($_POST);
-		}
+        // Check if the form is submitted
+        if (isset($_POST['email'])) {
+            // Assuming you have a User model
+            $userModel = $this->loadModel("user");
 
-		$this->view("catalog/signup",$data);	
-	}
+            // Get form data
+            $userData = [
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'username' => $_POST['username'], // Add the new username field
+            ];
 
- 
+            // Perform server-side validation if needed
+            // ...
+
+            // Call the signup method in your model
+            $signupResult = $userModel->signup($userData);
+
+            if ($signupResult === true) {
+                // Registration successful, redirect or display success message
+                // Example redirect:
+                header("Location: /login");
+                exit();
+            } else {
+                // Registration failed, pass error messages to the view
+                $data['error'] = $signupResult;
+            }
+        }
+
+        $this->view("catalog/signup", $data);
+    }
 }
