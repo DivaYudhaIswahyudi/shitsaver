@@ -24,6 +24,7 @@ class Upload_file
                 move_uploaded_file($FILES['file']['tmp_name'], $destination);
 
                 $arr['title'] = esc($POST['title']);
+                $arr['description'] = esc($POST['description']); // Add description field
                 $arr['date'] = date("Y-m-d H:i:s");
                 $arr['user_url'] = isset($_SESSION['user_url']) ? $_SESSION['user_url'] : 1;
                 $arr['image'] = $destination;
@@ -31,7 +32,7 @@ class Upload_file
                 $arr['url_address'] = get_random_string_max(60);
 
                 $DB = new Database();
-                $query = "INSERT INTO images (title, user_url, date, image, views, url_address) VALUES (:title, :user_url, :date, :image, :views, :url_address)";
+                $query = "INSERT INTO images (title, description, user_url, date, image, views, url_address) VALUES (:title, :description, :user_url, :date, :image, :views, :url_address)";
                 $DB->write($query, $arr);
 
                 header("Location: " . ROOT . "photos");
@@ -42,11 +43,8 @@ class Upload_file
         }
 
         if ($_SESSION['error'] != "") {
-            // Handle error, redirect or display a message
-            // For example: header("Location: " . ROOT . "error_page");
-            // Or display the error message to the user
+            // Handle error, redirect, or display a message
         }
     }
 }
 
-?>
