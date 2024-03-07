@@ -27,11 +27,6 @@
                 <i class="fas fa-film mr-2"></i>
                 
                 <?=WEBSITE_TITLE?> 
-                <?php 
-
-                    echo isset($_SESSION['user_email']) ? "<span style='font-size:14px;'> | Hi, " . $_SESSION['user_email'] . '</span>': "";
-                   
-                ?>
                 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
