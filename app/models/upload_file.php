@@ -9,7 +9,7 @@ class Upload_file
         $allowed[] = 'image/jpeg';
         $allowed[] = 'video/mp4';
 
-        //upload the file
+        // Upload the file
         if ($FILES['file']['name'] != "" && $FILES['file']['error'] == 0) {
             if (in_array($FILES['file']['type'], $allowed)) {
                 // Proceed with the upload logic

@@ -36,7 +36,7 @@
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link nav-link-1 <?= ($data['page_title']) == "Photos" ? 'active':'';?> " aria-current="page" href="<?=ROOT?>index">Photos</a>
-                </li>
+                <!-- </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-2 <?= ($data['page_title']) == "Videos" ? 'active':'';?> " href="<?=ROOT?>videos">Videos</a>
                 </li>
@@ -45,10 +45,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-4 <?= ($data['page_title']) == "Contact" ? 'active':'';?> " href="<?=ROOT?>contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4 <?= ($data['page_title']) == "Album" ? 'active':'';?> " href="<?=ROOT?>album">Album</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link nav-link-4 <?= ($data['page_title']) == "Upload Image" ? 'active':'';?> " href="<?=ROOT?>upload/image">Upload Image</a>
                 </li>
